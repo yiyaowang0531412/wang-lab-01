@@ -158,7 +158,7 @@ Before fitting the models, cases with missing values on the variables required b
 
 #| label: regression-data
 
-model_data <- bfi_analysis |>
+model_data_broken <- bfi_analysis |>
   select(
     Neuroticism,
     age,
