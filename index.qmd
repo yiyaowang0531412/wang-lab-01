@@ -158,7 +158,8 @@ Before fitting the models, cases with missing values on the variables required b
 
 #| label: regression-data
 
-model_data_broken <- bfi_analysis |>
+model_data <- bfi_analysis |>
+  filter(age >= 30) |>
   select(
     Neuroticism,
     age,
@@ -166,7 +167,6 @@ model_data_broken <- bfi_analysis |>
     Extraversion,
     Conscientiousness
   ) |>
-  filter(age > 30) |> 
   drop_na()
 
 ```
